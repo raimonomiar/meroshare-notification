@@ -130,7 +130,7 @@ async function sendEmail(scrips) {
 
 // Run the workflow
 (async () => {
-    if (process.env.NODE_ENV !== "production") {
+    if (process.env.NODE_ENV == "development") {
         dotenv.config();
     }
     const token = await login();
