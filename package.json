@@ -1,0 +1,26 @@
+{
+  "name": "meroshare-notification",
+  "version": "1.0.0",
+  "description": "Notification regarding new stocks on daily basis",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raimonomiar/meroshare-notification.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raimonomiar/meroshare-notification/issues"
+  },
+  "homepage": "https://github.com/raimonomiar/meroshare-notification#readme",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.1",
+    "nodemailer": "^7.0.6"
+  }
+}
