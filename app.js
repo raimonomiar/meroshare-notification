@@ -129,10 +129,12 @@ async function sendEmail(scrips) {
 
 // Run the workflow
 (async () => {
-  dotenv.config();
-  const token = await login();
-  console.log("Retrieved token:", token);
-  var scrips = await fetchApplicableIssues(token);
-  await sendEmail(scrips);
+    if (process.env.NODE_ENV !== "production") {
+        dotenv.config();
+    }
+    const token = await login();
+    console.log("Retrieved token:", token);
+    var scrips = await fetchApplicableIssues(token);
+    await sendEmail(scrips);
 })();
 
