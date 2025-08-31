@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 async function login() {
   try {
     var token = "";
+    console.log(`${process.env.MEROSHARE_API}/api/meroShare/auth/`);
     const response = await axios.post(
       `${process.env.MEROSHARE_API}/api/meroShare/auth/`,
       {
