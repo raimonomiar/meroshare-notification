@@ -19,7 +19,15 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
+        
+      - name: Debug env
+        run: |
+          echo "CLIENT_ID length: ${#MEROSHARE_CLIENT_ID}"
+          echo "USERNAME length: ${#MEROSHARE_USERNAME}"
+        env:
+          MEROSHARE_CLIENT_ID: ${{ secrets.MEROSHARE_CLIENT_ID }}
+          MEROSHARE_USERNAME: ${{ secrets.MEROSHARE_USERNAME }}
+          
       - name: Run script
         run: node app.js
         env:
